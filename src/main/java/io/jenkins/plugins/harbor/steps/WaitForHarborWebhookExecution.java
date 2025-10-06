@@ -45,7 +45,7 @@ public class WaitForHarborWebhookExecution extends StepExecution implements Cons
     private static final int MAX_LOG_LINES = 1000;
     private static final String BUILD_IMAGE_NAME_PATTERN = "#\\d+ naming to (\\S+/\\S+/\\S+:\\S+) .*done";
     private static final String BUILD_IMAGE_DIGEST_PATTERN = "(\\d+): digest: (sha256:[a-f0-9]+) size: (\\d+)";
-    private static final String BUILDX_IMAGE_DIGEST_PATTERN = "#\\d+: writing image: (sha256:[a-f0-9]+) .*done";
+    private static final String BUILDX_IMAGE_DIGEST_PATTERN = "#\\d+: writing image (sha256:[a-f0-9]+) .*done";
     private final WaitForHarborWebhookStep waitForHarborWebhookStep;
     private Image image;
 
