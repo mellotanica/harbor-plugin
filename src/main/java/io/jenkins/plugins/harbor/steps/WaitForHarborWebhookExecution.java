@@ -99,7 +99,8 @@ public class WaitForHarborWebhookExecution extends StepExecution implements Cons
                     foundImageDigest = buildxDigestMatcher.group(1);
                 }
             }
-        } else {
+        }
+        if(foundImageName != null && foundImageDigest == null) {
             foundImageDigest = getDigestByFullImageName(foundImageName);
         }
 
